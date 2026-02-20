@@ -128,7 +128,7 @@ loadProjects();
   }
 
   function startAuto() {
-    timer = setInterval(nextSlide, 3000); // Every 3 second
+    timer = setInterval(nextSlide, 2000); // Every 3 second
   }
 
   function stopAuto() {
@@ -138,9 +138,7 @@ loadProjects();
   // Pause on hover — good UX!
   document.querySelector(".img-slider").addEventListener("mouseenter", stopAuto);
   document.querySelector(".img-slider").addEventListener("mouseleave", startAuto);
-  document.querySelector(".dots").addEventListener("mouseenter", stopAuto);
-
-
+  
   // Make goToSlide global so dots onclick works
   window.goToSlide = function(index) {
     stopAuto();       // Reset timer when user clicks
