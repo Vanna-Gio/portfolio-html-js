@@ -56,48 +56,77 @@
 </section>
 
   <!-- ===== ABOUT SECTION ===== -->
-  <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="assets/images/profile1.jpg" alt="Sovanna Ra">
-        </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p>Aspiring web developer with a solid foundation in front-end and back-end technologies. 
-             Passionate about building user-friendly and visually appealing websites.</p>
+   <div id="about">
+  <div class="container">
+    <div class="row">
 
-          <!-- TABS -->
-          <div class="tab-title">
-            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
-            <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
-            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+      <!-- ===== IMAGE SLIDER ===== -->
+      <div class="about-col-1">
+        <div class="img-slider">
+
+          <div class="slide">
+            <img src="assets/images/school.png" alt="At School">
+            <span class="slide-label">🎓 University</span>
           </div>
 
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Frontend</span><br>HTML, CSS, JavaScript, Bootstrap, jQuery</li>
-              <li><span>UI/UX</span><br>Figma, Adobe Photoshop</li>
-              <li><span>Database</span><br>MySQL, SQL Server</li>
-              <li><span>Tools</span><br>Git, GitHub, VS Code</li>
-            </ul>
+          <div class="slide active">
+            <img src="assets/images/profile1.jpg" alt="Sovanna Ra">
+            <span class="slide-label">👤 Profile</span>
           </div>
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>2023 - Current</span><br>Data Entry Specialist</li>
-              <li><span>Software Developer Intern</span><br>ACLIDA University — 10 months<br>HTML, CSS, JS, C#, ASP.NET MVC, SQL</li>
-            </ul>
+
+          <div class="slide active">
+            <img src="assets/images/profile2.jpg" alt="Sovanna Ra">
+            <span class="slide-label">👤 Profile</span>
           </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>2022 - Current</span><br>ACLIDA University of Business</li>
-              <li>Third-year <strong>Business IT</strong> student</li>
-            </ul>
+          
+
+          <!-- Dot indicators -->
+          <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
           </div>
+
         </div>
       </div>
+
+      <!-- ===== ABOUT TEXT (unchanged) ===== -->
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Aspiring web developer with a solid foundation in front-end and back-end technologies.
+           Passionate about building user-friendly and visually appealing websites.</p>
+
+        <div class="tab-title">
+          <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+          <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+          <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Frontend</span><br>HTML, CSS, JavaScript, Bootstrap, jQuery</li>
+            <li><span>UI/UX</span><br>Figma, Adobe Photoshop</li>
+            <li><span>Database</span><br>MySQL, SQL Server</li>
+            <li><span>Tools</span><br>Git, GitHub, VS Code</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2023 - Current</span><br>Data Entry Specialist</li>
+            <li><span>Software Developer Intern</span><br>ACLIDA University — 10 months<br>HTML, CSS, JS, C#, ASP.NET MVC, SQL</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2022 - Current</span><br>ACLIDA University of Business</li>
+            <li><strong>Business IT</strong> student</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
+</div>
 
   <!-- ===== SERVICES SECTION ===== -->
   <div id="services">

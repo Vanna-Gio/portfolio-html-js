@@ -98,3 +98,56 @@ window.addEventListener("scroll", function() {
 // ========== INIT ==========
 // Run when page loads
 loadProjects();
+
+
+// ===========================
+// IMAGE SLIDER
+// ===========================
+(function () {
+  const slides = document.querySelectorAll(".slide");
+  const dots   = document.querySelectorAll(".dot");
+  let current  = 0;
+  let timer;
+
+  function goToSlide(index) {
+    // Remove active from current
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+
+    // Set new current
+    current = index;
+
+    // Add active to new slide
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  function nextSlide() {
+    const next = (current + 1) % slides.length; // Loop back to 0
+    goToSlide(next);
+  }
+
+  function startAuto() {
+    timer = setInterval(nextSlide, 3000); // Every 3 second
+  }
+
+  function stopAuto() {
+    clearInterval(timer);
+  }
+
+  // Pause on hover — good UX!
+  document.querySelector(".img-slider").addEventListener("mouseenter", stopAuto);
+  document.querySelector(".img-slider").addEventListener("mouseleave", startAuto);
+  document.querySelector(".dots").addEventListener("mouseenter", stopAuto);
+
+
+  // Make goToSlide global so dots onclick works
+  window.goToSlide = function(index) {
+    stopAuto();       // Reset timer when user clicks
+    goToSlide(index);
+    startAuto();
+  };
+
+  // Start automatically
+  startAuto();
+})();
