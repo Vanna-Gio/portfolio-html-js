@@ -17,7 +17,7 @@ function loadProjects() {
     card.innerHTML = `
       <img src="${project.image}" 
            alt="${project.title}"
-           onerror="this.src='https://placehold.co/400x250/06152c/3a71ff/FFF?text=${encodeURIComponent(project.title)}'">
+           onerror="this.src='${encodeURIComponent(project.title)}'">
       <div class="layer">
         <h3>${project.title}</h3>
         <p>${project.desc}</p>
@@ -128,7 +128,7 @@ loadProjects();
   }
 
   function startAuto() {
-    timer = setInterval(nextSlide, 2000); // Every 3 second
+    timer = setInterval(nextSlide, 2000); // Every 2 second
   }
 
   function stopAuto() {
